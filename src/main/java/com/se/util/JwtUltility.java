@@ -16,9 +16,8 @@ import io.jsonwebtoken.SignatureAlgorithm;
 @Component
 public class JwtUltility {
 	
-	public static final long JWT_TOKEN_VALIDITY = 5 * 60 * 60;
-	@Value("${jwt.secret.key}")
-    private String SECRET_KEY;
+	private static final long JWT_TOKEN_VALIDITY = 5 * 60 * 60;
+    private static final String SECRET_KEY = "Hey PhanTanTan. This secret key must have at least 256 bit character like this.";
 	
     
     public String getUsernameFromToken(String token) {
